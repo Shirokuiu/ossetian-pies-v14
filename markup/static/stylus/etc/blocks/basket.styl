@@ -1,0 +1,366 @@
+.basket
+  max-width 1400px
+  margin 0 auto
+  padding 0 20px
+  h2
+    font('Muller', 38px, 700, #333333)
+    
+    margin-bottom 15px
+    
+    text-align center
+  .total
+    display flex
+    justify-content flex-end
+    padding-right: 72px;
+    p
+      font('Muller', 24px, 700, #FF3C38)
+      span
+        margin 0 5px
+  .items
+    reset-list()
+    
+    margin-bottom 20px
+    
+    border-top 1px solid #E5E5E5
+    border-bottom 1px solid #E5E5E5
+    li
+      position relative
+      
+      display flex
+      justify-content space-between
+      align-items center
+      padding 18px 0
+      
+      border-bottom 1px solid #E5E5E5
+      &:last-child
+        border-bottom none
+      .exit
+        reset-button()
+        
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        
+        width 35px
+        height 35px
+        margin auto
+        
+        exit(100%, 2px, #BBBBBB)
+        &::before,
+        &::after
+          transition 0.2s ease
+        &:hover
+          &::before,
+          &::after
+            background-color #FF3C38
+      .headline
+        font('Muller', 18px, 400, #333333)
+        
+        box-sizing border-box
+        width 400px
+        padding-left 20px
+      .count
+        font('Muller', 24px, 700, #333333)
+        
+        width 130px
+        
+        text-align center
+      .price
+        font('Muller', 24px, 700, #333333)
+        
+        width 170px
+        
+        text-align center
+        span
+          margin-left 5px
+      .total-price
+        font('Muller', 24px, 700, #333333)
+        
+        width 270px
+        
+        text-align center
+        span
+          margin-right 5px
+  .tit
+    reset-list()
+    
+    display flex
+    justify-content space-between
+    margin-bottom 10px
+    li
+      p
+        font('Muller', 20px, 500, #465C5C)
+        
+        text-align center
+      &:nth-child(1)
+        width 400px
+      &:nth-child(2)
+        width 130px
+      &:nth-child(3)
+        width 170px
+      &:nth-child(4)
+        width 270px
+        
+.basket__order
+  display flex
+  padding 50px 40px
+  
+  background-color #FBF1D1
+  
+  border-radius 20px
+  .submit
+    reset-button()
+    font('Muller', 24px, 500, #FFFFFF)
+    
+    width 300px
+    margin-left: 5.71%;
+    
+    text-align center
+    
+    background-color #1CAD33
+    box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.25);
+    
+    border-radius 100px
+    
+    transition 0.2s ease
+    &:hover
+      background-color #158727
+  .block-left
+    flex-grow 1
+    width 50%
+    .row
+      display flex
+      align-items center
+      .total-order
+        font('Muller', 24px, 700, #FF3C38)
+        
+        box-sizing border-box
+        width 290px
+        margin-left 42px
+        padding-left 20px
+        span
+          margin 0 5px
+      .textarea
+        position relative
+        
+        flex-grow 1
+        width 50%
+        span
+          bgs(24px, 24px)
+          bgi('chat1.svg')
+          
+          position absolute
+          top 0
+          left 22px
+          bottom 0
+          
+          margin auto
+        textarea
+          reset-input()
+          font('Muller', 20px, 500, #465C5C)
+          placeholder('Muller', 20px, 500, #465C5C)
+          
+          height 30px
+          padding-left: 56px;
+          padding-bottom 5px
+          
+          border-bottom 1px solid #BBBBBB
+          
+          resize none
+    ul
+      reset-list()
+      
+      display flex
+      margin-bottom 35px
+      li
+        position relative
+        
+        flex-grow 1
+        margin-right: 5.1%;
+        &:last-child
+          margin-right 0
+        span
+          bgs(24px, 24px)
+          
+          position absolute
+          top -12px
+          left 8%
+          bottom 0
+          
+          margin auto
+        input
+          reset-input()
+          font('Muller', 20px, 500, #465C5C)
+          placeholder('Muller', 20px, 500, #465C5C)
+          
+          padding-left: 19.12%;
+          padding-bottom 5px
+          
+          border-bottom 1px solid #BBBBBB
+        &:nth-child(1)
+          span
+            bgi('boy.svg')
+        &:nth-child(2)
+          span
+            bgi('phone.svg')
+        &:nth-child(3)
+          span
+            bgi('placeholder.svg')
+            
+@media(max-width 1220px)
+  .basket__order
+    padding: 30px 20px;
+    
+@media(max-width 1080px)
+  .basket__order
+    flex-direction: column;
+    padding-bottom: 20px;
+    
+  .basket__order .block-left
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    
+  .basket__order .submit
+    margin: 0 auto;
+    padding: 11px 0;
+    
+@media(max-width 860px)
+  .basket .tit
+    display: none;
+    
+  .basket .items li
+    flex-direction: column;
+    padding-top: 40px;
+    
+  .basket .items li .headline
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    
+  .basket .items li .count
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    
+  .basket .items li .price
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    
+  .basket .items li .total-price
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    
+  .basket .items li .exit
+    bottom: auto;
+    top: 3px;
+    
+  .basket .total
+    padding-right: 22px;
+    
+  .basket__order
+    padding-top: 20px;
+    
+  .basket__order .block-left ul
+    flex-direction: column;
+    margin-bottom: 15px;
+    
+  .basket__order .block-left ul li
+    margin-right: 0;
+    margin-bottom: 15px;
+    &:last-child
+      margin-bottom 0
+    
+  .basket__order .block-left ul li input
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    
+  .basket__order .block-left ul li span
+    display: none;
+    
+  .basket__order .block-left .row
+    flex-direction: column;
+    
+  .basket__order .block-left .row .textarea
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    
+  .basket__order .block-left .row .textarea textarea
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    
+  .basket__order .block-left .row .textarea span
+    display: none;
+    
+  .basket__order .block-left .row .total-order
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    
+@media(max-width 480px)
+  .basket
+    padding 0 10px
+  
+  .basket .items li
+    padding-top: 30px;
+    padding-bottom: 15px;
+    
+  .basket .items li .headline
+    padding: 0;
+    
+  .basket .items li .total-price
+    margin-bottom: 0;
+    
+  .basket .items li .exit
+    width: 25px;
+    height: 25px;
+    
+  .basket .total
+    padding-right: 0;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+  .basket h2
+    font-size: 22px;
+    line-height: 26px;
+    
+  .basket__order
+    padding-left 10px
+    padding-right 10px
+    
+  .basket__order .submit
+    width 100%
+    
+  .basket .items li .count
+    padding 0
+    
+  .basket .items li .price
+    padding 0
+    
+  .basket .items li .total-price
+    padding 0
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+        
+        

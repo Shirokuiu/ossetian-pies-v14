@@ -1,0 +1,189 @@
+.prom
+  display flex
+  justify-content flex-end
+  margin-bottom 21px
+  padding-top 24px
+  padding-right: 3.55%;
+  padding-bottom 32px
+  
+  background-image url('%=static=%content/prom-bg.jpg')
+  background-repeat no-repeat
+  background-size cover
+  .img
+    width 300px
+    align-self flex-end
+  .desc
+    display flex
+    flex-direction column
+    align-items center
+    width 620px
+    margin-bottom 10px
+    .tit
+      p
+        font('Muller', 64px, 700, #FF3C38)
+
+        text-align center
+        &:nth-child(1)
+          margin-bottom 15px
+    .link
+      font('Muller', 22px, 400, #FFFFFF, true)
+      
+      box-sizing border-box
+      display inline-block
+      min-width 260px
+      padding 17px 5px
+      
+      text-align center
+      
+      background-color #FF3C38
+      box-shadow 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+      
+      border-radius 60px
+      
+      transition 0.2s ease
+      &:hover
+        background-color #D4100C
+    .text2
+      margin-bottom 11px
+      p
+        font('Muller', 42px, 700, #FF3C38)
+        
+        text-align center
+        &:nth-child(1)
+          margin-bottom 2px
+    .text
+      font('Muller', 32px, 500, #333333)
+      
+      margin-bottom 12px
+      
+      text-align center
+    .delivery
+      display flex
+      align-items center
+      margin-bottom 15px
+      p
+        font('Muller', 28px, 700, #1CAD33)
+        
+        margin-right 11px
+        padding-top 10px
+        
+        border-top 1px solid #1CAD33
+      span
+        display block
+        width 64px
+        height 64px
+        .icon
+          width 64px
+          height 64px
+          
+          fill #1CAD33
+          
+@media(max-width 1450px)
+  .prom
+    background-size: 100% 100%;
+    
+@media(max-width 1000px)
+  .prom
+    background-image url('%=static=%content/prom-bg-tablet.jpg')
+    justify-content: center;
+    padding-bottom: 15px;
+    
+  .prom .img
+    align-self: center;
+    width: 170px;
+    
+  .prom .desc .tit p
+    font-size: 44px;
+    line-height: 48px;
+    &:nth-child(1)
+      margin-bottom 3px
+      
+  .prom .desc .delivery
+    margin-bottom: 7px;
+    
+  .prom .desc .delivery p
+    font-size: 18px;
+    line-height: 22px;
+    
+  .prom .desc .delivery span
+    width: 44px;
+    height: 44px;
+    
+  .prom .desc .delivery span .icon
+    width: 44px;
+    height: 44px;
+    
+  .prom .desc .text
+    font-size: 20px;
+    line-height: 24px;
+    
+  .prom .desc .text2 p
+    font-size: 28px;
+    line-height: 32px;
+    
+  .prom .desc .link
+    padding: 10px 5px;
+    
+@media(max-width 700px)
+  .prom
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  .prom .img
+    display: none;
+    
+  .prom .desc
+    width: 100%;
+    margin-bottom 5px
+    
+@media(max-width 480px)
+  .prom
+    padding-top: 8px;
+    
+  .prom .desc .tit p
+    font-size: 28px;
+    line-height: 32px;
+    
+  .prom .desc .delivery p
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 4px;
+    
+  .prom .desc .delivery span
+    width: 34px;
+    height: 34px;
+    
+  .prom .desc .delivery span .icon
+    width: 34px;
+    height: 34px;
+    
+  .prom .desc .text
+    font-size: 17px;
+    line-height: 21px;
+    margin-bottom: 5px;
+    
+  .prom .desc .text2 p
+    font-size: 25px;
+    line-height: 29px;
+    
+@media(max-width 320px)
+  .prom .desc .delivery p
+    margin-right: 0;
+    
+  .prom .desc .delivery span
+    display none
+    
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          

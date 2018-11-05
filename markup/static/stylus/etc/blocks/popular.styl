@@ -1,0 +1,238 @@
+.popular
+  margin-bottom 35px
+  padding 0 90px
+  h2
+    font('Muller', 38px, 700, #FF3C38)
+    
+    margin-bottom 22px
+    
+    text-align center
+  .slider
+    position relative
+    .owl-stage-outer
+      padding-bottom 7px
+    .owl-dots
+      display flex
+      justify-content center
+      margin-top 21px
+      .owl-dot
+        box-sizing border-box
+        display block
+        width 16px
+        height 16px
+        margin-right 22px
+        
+        border 4px solid #E5E5E5
+        border-radius 50%
+        
+        transition 0.2s ease
+        &:hover
+          border-color #1CAD33
+        &.active
+          border 3px solid #1CAD33
+        &:last-child
+          margin-right 0
+    .owl-nav
+      center-absolute()
+      
+      top -52px
+      left: -60px;
+      right: -60px;
+      
+      display flex
+      justify-content space-between
+      align-items center
+      height 1px
+    .owl-prev,
+    .owl-next
+      width 40px
+      height 90px
+      
+      background-image url('%=static=%content/slider-button.png') !important
+      background-repeat no-repeat !important
+      background-size 40px 90px !important
+      span
+        &::before,
+        &::after
+          display none
+    .slider-slide
+      position relative
+      
+      display flex
+      flex-direction column
+      
+      background-image linear-gradient(rgba(255, 255, 255, 0) 0.79%, rgba(255, 255, 255, 0.6746) 33.7%, rgba(255, 252, 252, 0.8892) 77.42%, #FFFCFC 100%)
+      box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.15)
+      
+      border-radius 18px
+      &.hit
+        .sell-icon
+          background-image url('%=static=%content/hit.png')
+      &.new
+        .sell-icon
+          background-image url('%=static=%content/new.png')
+      .sell-icon
+        position absolute
+        top 0
+        right 0
+        
+        box-sizing border-box
+        width: 116px;
+        height: 108px;
+        padding-top: 7px;
+        padding-right: 7px;
+        
+        background-repeat no-repeat
+        background-position top right
+        background-size cover
+        p
+          font('Muller', 24px, 900, #FFFFFF)
+          
+          margin-bottom 3px
+          
+          letter-spacing 2px
+          text-align right
+          &:nth-child(2)
+            margin-bottom 0
+            
+            font-size 9px
+            line-height 13px
+            font-weight 500
+            letter-spacing 1px
+      .headline
+        font('Muller', 20px, 700, #333333, true)
+        
+        margin-top auto
+        margin-left 12px
+        margin-bottom 5px
+      .link
+        font('Muller', 18px, 500, #FFFFFF, true)
+        
+        display inline-block
+        align-self flex-start
+        min-width 130px
+        margin-top 20px
+        margin-left 20px
+        margin-bottom 85px
+        padding 9px 5px
+        
+        text-align center
+        
+        background-color #1CAD33
+        box-shadow 0 4px 9px -1px rgba(0,0,0,0.25)
+        
+        border-radius 10px
+        
+        transition 0.2s ease
+        &:hover
+          background-color #158727
+      .img
+        center-absolute()
+        
+        z-index -1
+        img
+          border-radius 18px
+      .desc
+        display flex
+        justify-content space-between
+        align-items center
+        padding-top 8px
+        padding-left 28px
+        padding-right 19px
+        
+        border-top 1px solid #1CAD33
+        ul
+          reset-list()
+          
+          flex-grow 1
+          width 50%
+          li
+            display flex
+            align-items center
+            margin-bottom 5px
+            
+            cursor pointer
+            &:last-child
+              margin-bottom 0
+            .radio-icon
+              box-sizing border-box
+              display block
+              width 15px
+              height 15px
+              margin-right 7px
+              
+              border 3px solid #BBBBBB
+              border-radius 50%
+            p
+              font('Muller', 18px, 700, #333333)
+              span
+                margin-left 5px
+            &.active
+              .radio-icon
+                border 5px solid #FF3C38
+        .price
+          font('Muller', 52px, 700, #1CAD33)
+          span
+            display inline-block
+            width 35px
+            height 35px
+            margin-left 5px
+            .icon
+              display block
+              width 35px
+              height 35px
+              
+              fill #1CAD33
+              
+@media(max-width 1739px)
+  .popular .slider .slider-slide .img img
+    height 100%
+    
+@media(max-width 1310px)
+  .popular .slider .slider-slide .desc .price
+    font-size: 37px;
+    line-height: 41px;
+    
+  .popular .slider .slider-slide .desc .price span
+    width: 25px;
+    height: 25px;
+    
+  .popular .slider .slider-slide .desc .price span .icon
+    width: 25px;
+    height: 25px;
+    
+@media(max-width 1249px)
+  .popular .slider .owl-dots
+    display none
+    
+  .popular .slider .owl-nav
+    top -10px
+    
+@media(max-width 870px)
+  .popular
+    padding: 0 20px;
+    margin-bottom: 35px;
+    
+  .popular .slider .owl-nav
+    position: static;
+    height: auto;
+    margin-top: 15px;
+    justify-content: space-around;
+    
+@media(max-width 480px)
+  .popular
+    margin-bottom: 25px;
+    padding 0 10px
+  
+  .popular h2
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 10px;
+              
+              
+              
+              
+              
+              
+              
+              

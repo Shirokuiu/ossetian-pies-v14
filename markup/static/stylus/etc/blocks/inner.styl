@@ -1,0 +1,270 @@
+.inner
+  display flex
+  align-items: center;
+  margin-bottom 40px
+  padding 0 4.69%;
+  .description
+    h3
+      font('Muller', 20px, 500, #465C5C)
+      
+      margin-bottom 22px
+    p
+      font('Muller', 20px, 300, #465C5C)
+    .row
+      display flex
+      margin-bottom 40px
+      ul
+        reset-list()
+        
+        margin-right 50px
+        &:last-child
+          margin-right 0
+        li
+          font('Muller', 20px, 300, #465C5C)
+          
+          display flex
+          align-items center
+          margin-bottom 22px
+          &:last-child
+            margin-bottom 0
+          &::before
+            content ''
+            
+            box-sizing border-box
+            display block
+            width 15px
+            height 15px
+            margin-right 8px
+            
+            border 5px solid #99B2DD
+            border-radius 50%
+  .img
+    width 600px
+    margin-right: 2.88%;
+    img
+      display block
+      
+      border-radius 10px
+  .calculate-block
+    box-sizing border-box
+    width 300px
+    margin-right: 2.88%;
+    padding 0 30px
+    padding-top 15px
+    padding-bottom 30px
+    
+    border 1px solid #E5E5E5
+    border-radius 10px
+    .add
+      reset-button()
+      font('Muller', 20px, 500, #FFFFFF)
+      
+      width 230px
+      padding 18px 5px
+      
+      text-align center
+      
+      background-color #1CAD33
+      box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+      
+      border-radius 60px
+      
+      transition 0.2s ease
+      &:hover
+        background-color #158727
+    .price
+      display flex
+      justify-content space-between
+      margin-bottom 20px
+      p
+        &:nth-child(1)
+          font('Muller', 20px, 500, #465C5C)
+          
+          align-self: flex-end;
+          
+          transform: translateY(-9px);
+        &:nth-child(2)
+          font('Muller', 44px, 700, #FF3C38)
+          span
+            display inline-block
+            width 25px
+            height 25px
+            margin-left 5px
+            .icon
+              width 27px
+              height 33px
+              
+              fill #FF3C38
+    .calculate
+      margin-bottom 15px
+      padding-top 15px
+      padding-bottom 20px
+      
+      border-top 1px solid #E5E5E5
+      border-bottom 1px solid #E5E5E5
+      .row
+        display flex
+        p
+          font('Muller', 26px, 700, #333333)
+          
+          width 50px
+          height 50px
+          
+          text-align center
+          line-height: 53px;
+          
+          background-color #E1EFF4
+        button
+          reset-button()
+          
+          position relative
+          
+          flex-grow 1
+          &::before,
+          &::after
+            center-absolute()
+            
+            content ''
+            
+            width 26%
+            height 2px
+            
+            background-color #BBBBBB
+          &::before
+            transform rotate(-90deg)
+          &.minus
+            &::before
+              display none
+    h3
+      font('Muller', 20px, 500, #465C5C)
+      
+      margin-bottom 22px
+      
+      text-align center
+    ul
+      reset-list()
+      
+      display flex
+      justify-content space-between
+      margin-bottom 18px
+      li
+        display flex
+        flex-direction column
+        align-items center
+        
+        cursor pointer
+        p
+          font('Muller', 18px, 700, #BBBBBB)
+        span
+          box-sizing border-box
+          display block
+          width 25px
+          height 25px
+          margin-bottom 9px
+          
+          border 1px solid #BBBBBB
+          border-radius 50%
+        &.active
+          span
+            border 6px solid #1CAD33
+          p
+            color #1CAD33
+  .description
+    width 590px
+    
+@media(max-width 1550px)
+  .inner
+    flex-wrap: wrap;
+    
+  .inner .img
+    width: 53%;
+    
+  .inner .calculate-block
+    margin-right: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    
+  .inner .description
+    width: 100%;
+    margin-top: 20px;
+    
+  .inner .description .row
+    margin-bottom: 30px;
+    
+  .inner .calculate-block .add
+    margin 0 auto
+    
+@media(max-width 1180px)
+  .inner
+    padding-left: 20px;
+    padding-right: 20px;
+    
+@media(max-width 880px)
+  .inner
+    flex-direction: column;
+    
+  .inner .img
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 500px;
+    
+  .inner .calculate-block
+    flex-grow: 0;
+    width: 100%;
+    
+  .inner .calculate-block .calculate .row
+    justify-content: center;
+    
+  .inner .calculate-block .calculate .row button
+    flex-grow: 0;
+    width: 50px;
+    
+  .inner .calculate-block .calculate .row p
+    margin: 0 20px;
+    
+  .inner .calculate-block .calculate .row button::before, .inner .calculate-block .calculate .row button::after
+    width: 70%;
+    
+@media(max-width 580px)
+  .inner .img
+    width: 100%;
+    
+  .inner .description .row
+    flex-direction: column;
+    
+  .inner .description .row ul
+    &:nth-child(1)
+      margin-right 0
+      margin-bottom 22px
+      
+@media(max-width 480px)
+  .inner
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  .inner .calculate-block
+    padding: 0 10px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    
+  .inner .calculate-block .add
+    padding: 11px 5px;
+    margin: 0;
+    width: 100%;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

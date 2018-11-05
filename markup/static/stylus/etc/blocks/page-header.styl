@@ -1,0 +1,430 @@
+.page-header
+  .bottom
+    display flex
+    button
+      reset-button()
+      
+      position absolute
+      top 20px
+      left 20px
+      
+      width 30px
+      height 30px
+      
+      exit(100%, 3px, #ffffff)
+    nav
+      flex-grow 1
+      width 50%
+      
+      background-color #99B2DD
+      box-shadow 2px 1px 2px 0 rgba(0, 0, 0, 0.25)
+      ul
+        reset-list()
+        
+        display flex
+        li
+          flex-grow 1
+          a
+            font('Muller', 20px, 500, #FFFFFF, true)
+            
+            display block
+            padding: 13px 0;
+            
+            text-align center
+            
+            transition 0.2s ease
+            &:hover
+              background-color #FF3C38
+    .title
+      font('Muller', 20px, 500, #ffffff)
+      
+      position relative
+      
+      box-sizing border-box
+      width 260px
+      padding 13px 0
+      
+      text-align center
+      
+      background-color #FDA800
+      box-shadow 3px 2px 2px 0 rgba(0, 0, 0, 0.2)
+  .middle
+    position relative
+    z-index 1
+    
+    display flex
+    align-items center
+    padding-right: 1.05%;
+    .tel
+      font('Muller', 32px, 700, #FF3C38, true)
+    .basket
+      margin-right: 2.53%;
+      a
+        box-sizing border-box
+        display flex
+        align-items center
+        width 132px
+        padding 5px
+        padding-left 0
+
+        text-decoration none
+
+        background-color #99B2DD
+
+        border-radius 60px
+
+        transition 0.2s ease
+        &:hover
+          background-color #F3705A
+        .icon
+          bgs(32px, 32px)
+          bgi('basket.svg')
+
+          margin-left auto
+          margin-right 23px
+        .count
+          font('Muller', 26px, 700, #333333)
+
+          width 50px
+          height 50px
+
+          line-height 53px
+          text-align center
+
+          background-color #FFFFFF
+
+          border-radius 50%
+    .contacts
+      flex-grow 1
+      width 50%
+      padding-left: 3.335%;
+      padding-right: 1.46%;
+      ul
+        reset-list()
+        
+        display flex
+        justify-content space-between
+        li
+          a
+            display flex
+            align-items center
+            padding 14px 23px
+            
+            text-decoration none
+            
+            border-radius 60px
+            
+            transition 0.2s ease
+            &:hover
+              background-color #FF3C38
+              p
+                color #ffffff
+              span
+                .icon
+                  fill #ffffff
+            p
+              font('Muller', 20px, 500, #465C5C)
+              
+              transition 0.2s ease
+            span
+              display block
+              width 32px
+              height 32px
+              margin-right 5px
+              .icon
+                display block
+                width 32px
+                height 32px
+                
+                fill #465C5C
+                
+                transition 0.2s ease
+          &.sell
+            a
+              span
+                .icon
+                  fill #FF3C38
+              p
+                color #FF3C38
+              &:hover
+                background-color #FF3C38
+                p
+                  color #ffffff
+                span
+                  .icon
+                    fill #ffffff
+    .logo
+      display flex
+      align-items center
+      box-sizing border-box
+      width 260px
+      padding 15px 0
+      padding-left 22px
+      padding-right 15px
+      
+      background-color #FF3C38
+      button
+        reset-button()
+        
+        display none
+        width 30px
+        height 30px
+        .icon
+          display block
+          width 30px
+          height 30px
+          
+          fill #ffffff
+      .img
+        width 70px
+        margin-right 12px
+        img
+          display block
+      .text
+        p
+          font('Muller', 34px, 900, #ffffff)
+          
+          margin-bottom 2px
+          &:last-child
+            font('Muller', 26px, 700, #ffffff)
+            
+            margin-bottom 0
+  .top
+    position relative
+    z-index 2
+    
+    padding: 15px 2.559%;
+    
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+    ul
+      reset-list()
+      
+      display flex
+      justify-content space-between
+      li
+        font('Muller', 16px, 400, #333333)
+        
+        display flex
+        flex-direction row-reverse
+        align-items center
+        span
+          position relative
+          
+          box-sizing border-box
+          width 12px
+          height 12px
+          margin-right 15px
+          
+          border 1px solid #FF3C38
+          border-radius 50%
+          &::before
+            center-absolute()
+            
+            content ''
+            
+            width 6px
+            height 6px
+            
+            background-color #FF3C38
+            
+            border-radius 50%
+            
+@media(max-width 1770px)
+  .page-header .middle .logo
+    padding-left: 5px;
+    padding-right: 0;
+    width: 235px;
+  
+  .page-header .middle .contacts
+    padding-left: 0.335%;
+    padding-right: 0.46%;
+    
+  .page-header .middle .basket
+    margin-right: 0.53%;
+    
+  .page-header .bottom .title
+    width: 235px;
+    
+@media(max-width 1640px)
+  .page-header .middle .logo
+    width: 185px;
+    
+  .page-header .middle .logo .img
+    width: 55px;
+    
+  .page-header .middle .logo .text p
+    font-size: 25px;
+    line-height: 29px;
+    
+  .page-header .middle .logo .text p:last-child
+    font-size: 19px;
+    line-height: 23px;
+    
+  .page-header .middle .contacts ul li a
+    padding: 7px 10px;
+    
+  .page-header .middle .contacts ul li a span
+    width: 22px;
+    height: 22px;
+    
+  .page-header .middle .contacts ul li a span .icon
+    width: 22px;
+    height: 22px;
+    
+  .page-header .middle .contacts ul li a p
+    font-size: 15px;
+    line-height: 19px;
+    
+  .page-header .middle .basket a .count
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    
+  .page-header .middle .tel
+    font-size: 24px;
+    line-height: 28px;
+    
+  .page-header .bottom .title
+    width: 185px;
+    font-size: 16px;
+    line-height: 24px;
+    
+@media(max-width 1260px)
+  .page-header .bottom .title
+    display: none;
+    
+@media(max-width 1190px)
+  .page-header
+    padding-top: 57px;
+    
+  .page-header .top
+    display none
+  
+  .page-header .middle .logo .img
+    margin-right: 14px;
+    margin-left: auto;
+    
+  .page-header .middle .logo .text
+    display: none;
+    
+  .page-header .middle .logo button
+    display block
+    
+  .page-header .middle .logo
+    width: 125px;
+    padding: 7px 0;
+    padding-left: 8px;
+    order: 1;
+    
+    cursor pointer
+    
+  .page-header .bottom
+    display none
+    &.open
+      display flex
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 20;
+      nav
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ul
+          flex-direction: column;
+          width: 100%;
+    
+  .page-header .middle
+    position: fixed;
+    justify-content: space-between;
+    padding-right: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    
+  .page-header .middle .contacts
+    display: none;
+    
+  .page-header .middle .basket
+    order: 3;
+    margin-right: 0;
+    margin-left 0
+    
+  .page-header .middle .basket a
+    width: 86px;
+    
+  .page-header .middle .basket a .icon
+    width: 22px;
+    height: 22px;
+    background-size: 22px 22px;
+    margin-right: 9px;
+    
+  .page-header .middle .basket a .count
+    width: 30px;
+    height: 30px;
+    line-height: 33px;
+    font-size: 19px;
+    
+  .page-header .middle .tel
+    order: 2;
+    
+@media(max-width 480px)
+  .page-header
+    padding-top: 45px;
+    
+  .page-header .middle .logo
+    width: 85px;
+    padding: 9px 0;
+    padding-left: 8px;
+    
+  .page-header .middle .logo button
+    width: 20px;
+    height: 20px;
+    
+  .page-header .middle .logo button .icon
+    width: 20px;
+    height: 20px;
+    
+  .page-header .middle .logo .img
+    width: 35px;
+    margin-right: 10px;
+    
+  .page-header .middle .tel
+    font-size: 17px;
+    line-height: 21px;
+    
+@media(max-width 320px)
+  .page-header .middle .tel
+    font-size: 13px;
+    line-height: 17px;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            
+            
+            
+            
+            
+            
+            
+            

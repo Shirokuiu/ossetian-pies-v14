@@ -1,0 +1,45 @@
+.title
+  box-sizing border-box
+  max-width 1740px
+  margin 0 auto
+  margin-bottom 12px
+  padding 0 20px
+  h1,
+  h2
+    font('Muller', 38px, 700, #333333)
+    
+    text-align center
+  p
+    font('Muller', 20px, 300, #333333)
+  &--inner
+    margin-bottom: 25px;
+    padding 0 4.69%;
+    max-width inherit
+    h1,
+    h2
+      text-align left
+  &--center
+    h1,
+    h2
+      text-align center
+      
+@media(max-width 1180px)
+  .title--inner
+    padding-left: 20px;
+    padding-right: 20px;
+    
+@media(max-width 880px)
+  .title--inner
+    margin-bottom: 15px;
+    
+@media(max-width 480px)
+  .title
+    padding 0 10px
+  
+  .title h1, .title h2
+    font-size: 22px;
+    line-height: 26px;
+    
+  .title p
+    font-size: 16px;
+    line-height: 20px;

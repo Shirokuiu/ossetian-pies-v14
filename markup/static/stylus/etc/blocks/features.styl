@@ -1,0 +1,176 @@
+.features
+  max-width 1740px
+  margin 0 auto
+  margin-bottom 42px
+  .list2
+    reset-list()
+    
+    display flex
+    justify-content space-between
+    padding-left: 3.45%;
+    padding-right: 3.45%;
+    li
+      display flex
+      flex-direction column
+      align-items center
+      width 290px
+      &:nth-child(3)
+        transform: translateX(20px);
+      &:nth-child(4)
+        transform: translateX(21px);
+      p
+        &:nth-child(1)
+          font('Muller', 28px, 500, #333333)
+          
+          margin-bottom 7px
+          
+          text-align center
+        &:nth-child(2)
+          font('Muller', 36px, 700, #FF3C38)
+          
+          text-align center
+          span
+            display inline-block
+            width 25px
+            height 25px
+            margin-left 5px
+            .icon
+              display block
+              width 25px
+              height 25px
+              
+              fill #FF3C38
+  .list1
+    reset-list()
+    
+    display flex
+    justify-content space-between
+    margin-bottom 8px
+    padding-left: 3.45%;
+    padding-right: 3.45%;
+    padding-top 15px
+    padding-bottom 35px
+    
+    border-top 1px solid #E5E5E5
+    border-bottom 1px solid #E5E5E5
+    li
+      display flex
+      flex-direction column
+      align-items center
+      .img
+        width 173px
+      h3
+        font('Muller', 32px, 700, #333333)
+        
+        margin-bottom 35px
+        
+        text-align center
+        
+@media(max-width 1320px)
+  .features .list1
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  .features .list1 li
+    &:nth-child(1)
+      transform: translateX(16px);
+    &:nth-child(3)
+      transform: translateX(-14px);
+    &:nth-child(4)
+      transform: translateX(-27px);
+      
+  .features .list1 li h3
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    
+  .features .list1 li .img
+    width: 83px;
+    
+  .features .list2
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  .features .list2 li p:nth-child(1)
+    font-size: 19px;
+    line-height: 23px;
+    
+  .features .list2 li p:nth-child(2)
+    font-size: 20px;
+    line-height: 24px;
+    
+  .features .list2 li
+    width: 210px;
+    
+  .features .list2 li p:nth-child(2) span
+    width: 15px;
+    height: 15px;
+    
+  .features .list2 li p:nth-child(2) span .icon
+    width: 15px;
+    height: 15px;
+    
+  .features .list2 li:nth-child(3)
+    transform: translateX(0);
+    
+  .features .list2 li:nth-child(4)
+    transform: translateX(0);
+    
+@media(max-width 900px)
+  .features
+    position: relative;
+    
+  .features .list1
+    flex-direction: column;
+    
+  .features .list1 li:nth-child(1)
+    transform: translateX(0);
+    
+  .features .list1 li .img
+    margin-bottom: 70px;
+    
+  .features .list1 li:nth-child(3)
+    transform: translateX(0);
+    
+  .features .list1 li:nth-child(4)
+    transform: translateX(0);
+    
+  .features .list2 li
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    &:nth-child(1)
+      top: 147px;
+    &:nth-child(2)
+      top: 340px
+    &:nth-child(3)
+      top: 529px
+    &:nth-child(4)
+      top: 725px
+      
+@media(max-width 480px)
+  .features
+    margin-bottom: 12px;
+    
+@media(max-width 320px)
+  .features .list1 li:nth-child(2) .img
+    margin-bottom: 88px;
+    
+  .features .list2 li:nth-child(3)
+    top: 553px;
+    
+  .features .list2 li:nth-child(4)
+    top: 752px;
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

@@ -1,0 +1,333 @@
+.footer-content
+  background-color #415A6B
+  .bottom
+    display flex
+    justify-content space-between
+    align-items center
+    padding: 0 2.09%;
+    padding-bottom 20px
+    .copy
+      font('Muller', 16px, 500, #8CAFBE)
+    .ya
+      bgs(88px, 31px)
+      bgi('yandex-metrika.jpg')
+    a
+      display flex
+      align-items center
+      
+      text-decoration none
+      p
+        font('Muller', 16px, 500, #8CAFBE)
+        
+        margin-right 8px
+      span
+        bgs(130px, 36px)
+        bgi('developers.svg')
+  .middle
+    margin-bottom 93px
+    .socials
+      reset-list()
+      
+      display flex
+      justify-content center
+      li
+        margin-right 4px
+        &:last-child
+          margin-right 0
+        a
+          bgs(24px, 24px)
+          
+          text-decoration none
+          
+          background-color #ffffff
+        &:nth-child(1)
+          a
+            bgi('vk.svg')
+        &:nth-child(2)
+          a
+            bgi('fb.svg')
+        &:nth-child(3)
+          a
+            bgi('od.svg')
+        &:nth-child(4)
+          a
+            bgi('g.svg')
+        &:nth-child(5)
+          a
+            bgi('tw.svg')
+        &:nth-child(6)
+          a
+            bgi('v.svg')
+        &:nth-child(7)
+          a
+            bgi('wa.svg')
+    .row
+      display flex
+      align-items center
+      margin-bottom 35px
+      padding-right: 1.83%;
+
+      border-top 1px solid #7A99A6
+      border-bottom 1px solid #7A99A6
+      .tit
+        display flex
+        align-items center
+        width 260px
+        margin-right: 1.33%;
+        p
+          font('Muller', 20px, 500, #8CAFBE)
+          
+          margin 0 auto
+        span
+          bgs(41px, 79px)
+          bgi('footer-arrow.svg')
+          
+          background-size: 43px 79px;
+      ul
+        reset-list()
+        
+        flex-grow 1
+        display flex
+        justify-content space-between
+        width 50%
+        li
+          a
+            font('Muller', 20px, 500, #8CAFBE, true)
+            
+            position relative
+            
+            display inline-block
+            padding-bottom 1px
+            
+            transition 0.3s ease
+            &::after
+              content ''
+              
+              position absolute
+              left 0
+              bottom 0
+              
+              width 100%
+              height 1px
+              
+              background-color #ffffff
+              
+              opacity 0
+              
+              transition 0.3s ease
+            &:hover
+              color #ffffff
+              &::after
+                opacity 1
+  .top
+    display flex
+    justify-content center
+    align-items center
+    padding 15px 0
+    .logo
+      display flex
+      flex-direction column
+      align-items center
+      width 135px
+      margin 0 75px
+      .tit
+        font('Muller', 34px, 900, #FFDB4D)
+        
+        text-align center
+      .img
+        width 70px
+        margin-top 5px
+        margin-bottom 7px
+      .text
+        font('Muller', 26px, 700, #FFDB4D)
+        
+        text-align center
+    ul
+      reset-list()
+      
+      display flex
+      li
+        margin-right 68px
+        &:last-child
+          margin-right 0
+        a
+          display flex
+          align-items center
+          
+          text-decoration none
+          p
+            font('Muller', 20px, 500, #8CAFBE)
+            
+            position relative
+            
+            padding-bottom 2px
+            
+            transition 0.3s ease
+            &::after
+              content ''
+              
+              position absolute
+              left 0
+              bottom 0
+              
+              width 100%
+              height 1px
+              
+              background-color #ffffff
+              
+              opacity 0
+              
+              transition 0.3s ease
+          span
+            display block
+            width 32px
+            height 32px
+            margin-right 5px
+            .icon
+              display block
+              width 32px
+              height 32px
+              
+              fill #8CAFBE
+              
+              transition 0.3s ease
+        &:hover
+          span
+            .icon
+              fill #ffffff
+          p
+            color #ffffff
+            &::after
+              opacity 1
+              
+@media(max-width 1390px)
+  .footer-content .middle .row
+    padding: 20px 10px;
+    
+  .footer-content .middle
+    margin-bottom 33px
+    
+  .footer-content .middle .row .tit
+    display none
+    
+@media(max-width 1290px)
+  .footer-content .top .logo
+    margin: 0 2%;
+    
+@media(max-width 1170px)
+  .footer-content .top
+    position: relative;
+    padding: 0 10px;
+    padding-top: 90px;
+    margin-bottom: 20px;
+    
+  .footer-content .top ul
+    flex-grow: 1;
+    justify-content: space-between;
+    
+  .footer-content .top ul.list1
+    margin-right: 10%;
+    
+  .footer-content .top .logo
+    position: absolute;
+    top: 14px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    
+  .footer-content .top .logo .tit
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 700;
+    
+  .footer-content .middle .row ul
+    flex-direction: column;
+    align-items: center;
+    
+  .footer-content .middle .row ul li
+    margin-bottom 10px
+    &:last-child
+      margin-bottom 0
+      
+  .footer-content .top .logo .img
+    margin: 0 10px;
+    
+  .footer-content .top ul li
+    margin-right 0
+    
+@media(max-width 900px)
+  .footer-content .top
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    
+  .footer-content .top ul
+    flex-direction: column;
+    margin-right: 0;
+    
+  .footer-content .top ul li
+    margin-bottom: 10px;
+    
+  .footer-content .top ul li a
+    flex-direction: column;
+    
+  .footer-content .top ul li a span
+    display: none;
+    
+  .footer-content .bottom
+    flex-direction: column-reverse;
+    
+  .footer-content .bottom .ya
+    margin-bottom: 15px;
+    
+  .footer-content .bottom a
+    margin-bottom: 10px;
+    
+  .footer-content .top .logo
+    display none
+    
+  .footer-content .top ul.list1
+    margin-right 0
+    
+@media(max-width 480px)
+  .footer-content .bottom a
+    flex-direction: column;
+    margin-bottom: 18px;
+    
+  .footer-content .bottom a p
+    margin-right: 0;
+    margin-bottom: 10px;
+    
+  .footer-content .middle
+    margin-bottom: 15px;
+    
+  .footer-content .middle .row
+    margin-bottom: 15px;
+    
+@media(max-width 375px)
+  .footer-content .bottom .copy
+    font-size: 14px;
+    line-height: 18px;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+              
+              
+              
+              
+              
+              
+              

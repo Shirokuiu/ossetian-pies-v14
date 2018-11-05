@@ -1,0 +1,145 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  include ../components/img/img.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+
+    .wrapper
+      .content
+        header.page-header
+          div.top
+            ul
+              each items in ['Бесплатная доставка по Москве','Удобные способы оплаты','Сеть пекарен рядом с метро','Время работы: Пн - Вс 9:00 - 21:00']
+                li= items
+                  span
+          div.middle
+            div.logo
+              button(type="button")
+                != pugHelpers.Icon.call(locals, {iconName: 'menu', className: 'icon'})
+              div.img
+                +img('pizza.svg')
+              div.text
+                p МНОГО
+                p ПИРОГОВ
+            div.contacts
+              ul
+                each items in [{text:'О нас',sell:false,icon:'chef'},{text:'Акции',sell:true,icon:'sale'},{text:'Отзывы',sell:false,icon:'chat'},{text:'Оплата',sell:false,icon:'wallet'},{text:'Доставка',sell:false,icon:'delivery-man'},{text:'Контакты',sell:false,icon:'contact'}]
+                  li(class="" + (items.sell ? 'sell' : ''))
+                    a(href="#")
+                      span
+                        != pugHelpers.Icon.call(locals, {iconName: '' + items.icon, className: 'icon'})
+                      p= items.text
+            div.basket
+              a(href="#")
+                span.icon
+                span.count 0
+            a.tel(href="tel:84951339003") 8 (495) 133-90-03
+          div.bottom
+            button(type="button")
+            h2.title Осетинские пироги
+            nav
+              ul
+                each items in ['С говядиной','С курицей','С сыром','С капустой','С картошкой','С рыбой','С грибами','С овощами','Постные','Сладкие']
+                  li
+                    a(href="#")= items
+        main.page-content
+          .bread
+            ul
+              li
+                a(href="#") Главная
+                span
+                  != pugHelpers.Icon.call(locals, {iconName: 'next', className: 'icon'})
+              li
+                a(href="#") Осетинский пирог с говядиной
+          .title.title--inner.title--center
+            h1 Ваша корзина
+          .basket
+            ul.tit
+              each items in ['Наименование','Количество','Цена','Стоимость']
+                li
+                  p= items
+            ul.items
+              - for (let i = 0; i < 3; i++)
+                each items in [{title:'Осетинский пирог со свекольными листьями и сыром «Сахараджин»',count:'2',price:'750',totalPrice:'1 750'}]
+                  li
+                    p.headline= items.title
+                    p.count= items.count
+                    p.price 750
+                      span руб.
+                    p.total-price
+                      span= items.totalPrice
+                      | руб.
+                    button.exit(type="button")
+            div.total
+              p Итого:
+                span
+                | руб.
+            h2 Заполните данные по заказу
+            form.basket__order(action="action.php" method="post")
+              div.block-left
+                ul
+                  each items in [{type:'text',placeholder:'Ваше имя'},{type:'tel',placeholder:'Ваш телефон'},{type:'text',placeholder:'Адрес доставки'}]
+                    li
+                      input(type="" + items.type placeholder="" + items.placeholder required)
+                      span
+                .row
+                  .textarea
+                    textarea(placeholder="Комментарий к заказу")
+                    span
+                  p.total-order Итого:
+                    span 4 500
+                    | руб.
+              button.submit(type="submit") Оформить заказ
+        
+      footer.page-footer
+        .footer-content
+          div.top
+            ul.list1
+              each items in [{text:'О нас',icon:'chef'},{text:'Акции',icon:'sale'},{text:'Отзывы',icon:'chat'}]
+                li
+                  a(href="#")
+                    span
+                      != pugHelpers.Icon.call(locals, {iconName: '' + items.icon, className: 'icon'})
+                    p= items.text
+            div.logo
+              p.tit МНОГО
+              div.img
+                +img('pizza-footer.svg')
+              p.text ПИРОГОВ
+            ul
+              each items in [{text:'Оплата',icon:'wallet'},{text:'Доставка',icon:'delivery-man'},{text:'Контакты',icon:'contact'}]
+                li
+                  a(href="#")
+                    span
+                      != pugHelpers.Icon.call(locals, {iconName: '' + items.icon, className: 'icon'})
+                    p= items.text
+          div.middle
+            .row
+              .tit
+                p Осетинские пироги
+                span
+              ul
+                each items in ['С говядиной','С курицей','С сыром','С капустой','С картошкой','С рыбой','С грибами','С овощами','Постные','Сладкие']
+                  li
+                    a(href="#")= items
+            ul.socials
+              - for (let i = 0; i < 7; i++)
+                li
+                  a(href="#")
+          div.bottom
+            p.copy 2018 © Осетинские пироги «Много пирогов»
+            span.ya
+            a(href="#")
+              p Создание и продвижение сайта
+              span
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')
+    script(src='%=static=%js/separate-js/page-header.js')
+    script(src='%=static=%js/separate-js/basket.js')
